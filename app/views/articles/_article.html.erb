@@ -1,0 +1,10 @@
+
+ <div class= 'container'>
+
+
+ <%= form_for :article , url: articles_path do |form| %>
+     name: <%= form.text_field :name  , class: 'mt-1' , value:  @article.name%>
+     <%= url_for(@article.images.to_yaml) if @article.images.attached? %>
+     <%= form.submit %>
+   <% end %>
+   </div>
